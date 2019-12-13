@@ -1,0 +1,7 @@
+{
+  "name": "icanteen",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

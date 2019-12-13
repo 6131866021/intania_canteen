@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultMref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Menus</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content click='getMenu()'>
+  <!-- <ion-button expand='block' fill='clear' (click)='getMenu()'>
+    Get Menu
+  </ion-button> -->
+  <div *ngIf='menusCollection | async as menu'>
+    <ion-card *ngFor="let item of menu.data">
+    <h2>Menu Name:{{item.item}}</h2>
+    <h1>Calories:{{item.cal}}</h1>
+    <h1>Price:{{item.price}}</h1>
+    <h1>Filter:{{item.filter}}</h1>
+    </ion-card>
+  </div>
+
+</ion-content>
