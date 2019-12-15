@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+    <ion-title>Filter : By Calories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item color="light">
+      <ion-label>Calories Range</ion-label>
+      <ion-select [(ngModel)]="type" 
+                  [interfaceOptions]="customActionSheetOptions" 
+                  interface="action-sheet" placeholder="Select One">
+        <ion-select-option value="low">0-300 Cal</ion-select-option>
+        <ion-select-option value="med">300-600 Cal</ion-select-option>
+        <ion-select-option value="high">More than 600 Cal</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="dark" expand="full" routerLink='/cal/{{ type }}/' routerDirection='forward'>Go</ion-button>
+
+</ion-content>

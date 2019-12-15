@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { MenusPageRoutingModule } from './menus-routing.module';
-
 import { MenusPage } from './menus.page';
+
 import { HttpClientModule } from '@angular/common/http';
 import { MenuProvider } from './menus.service';
 

@@ -25,6 +25,22 @@ const routes: Routes = [
   {
       path: 'menu5',
       loadChildren: () => import('./menu5/menu5.module').then( m => m.Menu5PageModule)
+  },
+  {
+    path: 'allmenu',
+    loadChildren: () => import('./allmenu/allmenu.module').then( m => m.AllmenuPageModule)
+  },
+  {
+    path: 'filter',
+    loadChildren: () => import('./filter/filter.module').then( m => m.FilterPageModule)
+  },
+  {
+    path: 'foodtype',
+    loadChildren: () => import('./foodtype/foodtype.module').then( m => m.FoodtypePageModule)
+  },
+  {
+    path: 'cal',
+    loadChildren: () => import('./cal/cal.module').then( m => m.CalPageModule)
   }
 ];
 @NgModule({

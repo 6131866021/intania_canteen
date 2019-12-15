@@ -8,13 +8,19 @@ import { Menu2PageRoutingModule } from './menu2-routing.module';
 
 import { Menu2Page } from './menu2.page';
 
+import { HttpClientModule } from '@angular/common/http';
+import { Menu2Provider } from './menu2.service';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    Menu2PageRoutingModule
+    Menu2PageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [Menu2Page]
+  declarations: [Menu2Page],
+  providers: [Menu2Provider],
 })
+
 export class Menu2PageModule {}

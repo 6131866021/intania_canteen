@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Filter <ion-icon name="switch"></ion-icon> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="dark" routerLink='/foodtype/' routerDirection='forward'>
+    <ion-card-header>Filter By Food Type</ion-card-header>
+  </ion-card>
+
+  <ion-card color="light" routerLink='/cal/' routerDirection='forward'>
+    <ion-card-header>Filter By Calories Range</ion-card-header>
+  </ion-card>
+</ion-content>
