@@ -4,4 +4,6 @@ export interface Menu {
     item: string;
     price: number;
     store: number;
+    pic: string;
+    src: string;
 }

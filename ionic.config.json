@@ -1,7 +1,8 @@
 {
   "name": "icanteen",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }

@@ -1,9 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>menu5</ion-title>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultMref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Menu</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content click='getMenu()'>
+  <div *ngIf='menusCollection | async as menu'>
+    <ion-item *ngFor="let item of menu.data">
+      <ion-avatar slot="start">
+        <a href={{item.pic}}><img src={{item.src}} alt=""></a>
+      </ion-avatar>
+      <ion-label>
+      <ion-button slot="start" color="dark" fill="solid">{{item.item}}</ion-button>
+      <h3>Calories: {{item.cal}}</h3>
+      <h3>Price: {{item.price}}</h3>
+      <h4>Type: {{item.filter}}</h4>
+      </ion-label>
+    </ion-item>
+  </div>
 
 </ion-content>

@@ -1,20 +1,17 @@
 <ion-header>
-    <ion-toolbar color="danger">
+    <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button defaultMref="/"></ion-back-button>
+        <ion-back-button defaultHref="tabs"></ion-back-button>
       </ion-buttons>
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content click='getMenu()'>
-    <!-- <ion-button expand='block' fill='clear' (click)='getMenu()'>
-      Get Menu
-    </ion-button> -->
     <div *ngIf='menusCollection | async as menu'>
       <ion-item *ngFor="let item of menu.data">
         <ion-avatar slot="start">
-          <img src='/assets/milktea.jpg'>
+          <a href={{item.pic}}><img src={{item.src}} alt=""></a>
         </ion-avatar>
         <ion-label>
         <ion-button slot="start" color="dark" fill="solid">{{item.item}}</ion-button>

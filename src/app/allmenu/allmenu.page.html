@@ -1,27 +1,25 @@
 <ion-header>
-    <ion-toolbar color="danger">
-      <ion-buttons slot="start">
-        <ion-back-button defaultMref="/"></ion-back-button>
-      </ion-buttons>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content click='getMenu()'>
-    <!-- <ion-button expand='block' fill='clear' (click)='getMenu()'>
-      Get Menu
-    </ion-button> -->
-    <div *ngIf='menusCollection | async as menu'>
-      <ion-item *ngFor="let item of menu.data">
-        <ion-avatar slot="start">
-        </ion-avatar>
-        <ion-label>
-        <h2>Menu Name: {{item.item}}</h2>
-        <h3>Calories: {{item.cal}}</h3>
-        <h3>Price: {{item.price}}</h3>
-        <h3>Type: {{item.filter}}</h3>
-        </ion-label>
-      </ion-item>
-    </div>
-  
-  </ion-content>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-back-button defaultMref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content click='getMenu()'>
+  <div *ngIf='menusCollection | async as menu'>
+    <ion-item *ngFor="let item of menu">
+      <ion-avatar slot="start">
+        <a href={{item.pic}}><img src={{item.src}} alt=""></a>
+      </ion-avatar>
+      <ion-label>
+      <ion-button slot="start" color="dark" fill="solid">{{item.item}}</ion-button>
+      <h3>Calories: {{item.cal}}</h3>
+      <h3>Price: {{item.price}}</h3>
+      <h4>Type: {{item.filter}}</h4>
+      </ion-label>
+    </ion-item>
+  </div>
+
+</ion-content>
